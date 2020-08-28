@@ -1,9 +1,8 @@
 /*
   ==============================================================================
 
-    This file was auto-generated!
-
-    It contains the basic framework code for a JUCE plugin editor.
+    Dub-Echo PluginEditor.cpp
+    © Rob Salino 2020
 
   ==============================================================================
 */
