@@ -1,10 +1,7 @@
 /*
   ==============================================================================
-
-    This file was auto-generated!
-
-    It contains the basic framework code for a JUCE plugin processor.
-
+    Dub-Echo PluginProcessor.h
+    © Rob Salino 2020
   ==============================================================================
 */
 
@@ -12,9 +9,7 @@
 
 #include <JuceHeader.h>
 
-//==============================================================================
-/**
-*/
+
 class DubEchoAudioProcessor  : public AudioProcessor
 {
 public:
