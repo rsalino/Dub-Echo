@@ -1,7 +1,7 @@
 /*
   ==============================================================================
-Much of the delay was created with the aid of tutorials from The Audio Programmer
- on YouTube - a lot was left unexplained and was not implemented into any GUI, so
+ Circular buffer created with the aid of tutorials from The Audio Programmer
+ - a lot was left unexplained and was not implemented into any GUI, so
  the values and GUI values were interpreted and implemented by Rob Salino.
   ==============================================================================
 */
@@ -83,8 +83,7 @@ double DubEchoAudioProcessor::getTailLengthSeconds() const
 
 int DubEchoAudioProcessor::getNumPrograms()
 {
-    return 1;   // NB: some hosts don't cope very well if you tell them there are 0 programs,
-                // so this should be at least 1, even if you're not really implementing programs.
+    return 1;
 }
 
 int DubEchoAudioProcessor::getCurrentProgram()
@@ -117,8 +116,7 @@ void DubEchoAudioProcessor::prepareToPlay (double sampleRate, int samplesPerBloc
 
 void DubEchoAudioProcessor::releaseResources()
 {
-    // When playback stops, you can use this as an opportunity to free up any
-    // spare memory, etc.
+    
 }
 
 #ifndef JucePlugin_PreferredChannelConfigurations
@@ -238,7 +236,7 @@ void DubEchoAudioProcessor::feedbackDelay (int channel, const int bufferLength, 
 //==============================================================================
 bool DubEchoAudioProcessor::hasEditor() const
 {
-    return true; // (change this to false if you choose to not supply an editor)
+    return true;
 }
 
 AudioProcessorEditor* DubEchoAudioProcessor::createEditor()
@@ -249,19 +247,14 @@ AudioProcessorEditor* DubEchoAudioProcessor::createEditor()
 //==============================================================================
 void DubEchoAudioProcessor::getStateInformation (MemoryBlock& destData)
 {
-    // You should use this method to store your parameters in the memory block.
-    // You could do that either as raw data, or use the XML or ValueTree classes
-    // as intermediaries to make it easy to save and load complex data.
+    
 }
 
 void DubEchoAudioProcessor::setStateInformation (const void* data, int sizeInBytes)
 {
-    // You should use this method to restore your parameters from this memory block,
-    // whose contents will have been created by the getStateInformation() call.
+    
 }
 
-//==============================================================================
-// This creates new instances of the plugin..
 AudioProcessor* JUCE_CALLTYPE createPluginFilter()
 {
     return new DubEchoAudioProcessor();
